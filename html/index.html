@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Final Fantasy XI checklist Sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CheckList for Final Fantasy XI. Checklist of things to do, items to get, spell to learn, etc.">
+    <meta name="author" content="Maurice Duthieuw">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jstorage.js"></script>
+    <script type="text/javascript">
+        var profilesKey = 'profiles';
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/fragment.js"></script>
+    <script src="js/ffxichecklist.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <h1>Final Fantasy XI CheckList Sheet</h1>
+                <ul class="nav nav-tabs">
+                    <li><a href="#tabPlaythrough" data-toggle="tab">Playthrough</a></li>
+                    <li class="active"><a href="#tabJobs" data-toggle="tab">Jobs</a></li>
+                    <li><a href="#tabTrusts" data-toggle="tab">Trusts</a></li>
+                    <li><a href="#tabMissions" data-toggle="tab">Missions</a></li>
+                    <li><a href="#tabQuests" data-toggle="tab">Quests</a></li>
+                    <li><a href="#tabInformation" data-toggle="tab">Information</a></li>
+                    <li><a href="#tabHelp" data-toggle="tab">Help</a></li>
+                </ul>
+                <div class="profile" style="float: right;">
+                    <div class="input-append">
+                        <select id="profiles">
+                        </select>
+                        <button class="btn" type="button" id="profileAdd">Add</button>
+                        <button class="btn" type="button" id="profileEdit">Edit</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tabJobs">
+			
+				<div class="navbar">
+					<div class="navbar-inner">
+						<ul class="nav nav-pills">
+							<li class="active"><a href="#tabBlueMage" data-toggle="tab">BlueMage</a></li>
+							<li><a href="#tabRedMage" data-toggle="tab">RedMage</a></li>
+							<li><a href="#tabNinja" data-toggle="tab">Ninja</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="tab-content">
+
+					<div class="tab-pane active" id="tabBlueMage">
+						TODO tabBlueMage
+					</div>
+					<div class="tab-pane" id="tabRedMage">
+						TODO tabRedMage
+					</div>
+					
+					<div class="tab-pane" id="tabNinja">
+						<div data-fragment="ninja.html" data-eval-js="true"></div>
+					</div>
+					
+					
+				</div>
+			
+			</div>
+            <div class="tab-pane" id="tabTrusts">
+
+                <h2>Trusts <span id="trusts_overall_total"></span></h2>
+                <ul>
+                    <li><a href="#Tank">Tank</a> <span id="trusts_nav_totals_1"></span></li>
+                    <h3></h3>
+                </ul>
+
+                <a name="Tank"></a>
+                <h3>Tank <span id="trusts_totals_1"></span></h3>
+                <ul>
+                    <li data-id="trusts_1_1">Abenzio</li>
+                    <li data-id="trusts_1_2">Utsusemi</li>
+                </ul>
+			</div>
+
+            <div class="tab-pane" id="tabMissions">
+				TODO tabMissions
+			</div>
+            <div class="tab-pane" id="tabQuests">
+				TODO tabQuests
+			</div> 
+
+            <div class="tab-pane" id="tabPlaythrough">
+
+                <h2>Playthrough Checklist <span id="bluespell_overall_total"></span></h2>
+                <ul>
+                    <li><a href="#Magie_Bleu">Magie_Bleu</a> (Level 1) <span id="bluespell_nav_totals_1"></span></li>
+                    <li><a href="#Undead_Asylum200">Magie_BleuUndead_Asylum200</a> (Level 1) <span id="playthrough_nav_totals_200"></span></li>
+                </ul>
+
+                <hr />
+
+            </div>
+
+            <div class="tab-pane" id="tabInformation">
+TODO
+            </div>
+
+            <div class="tab-pane" id="tabHelp">
+TODO
+            </div>
+        </div>
+    </div>
+
+    <div id="profileModal" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="profileModalTitle">Profile</h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="profileModalName">Name</label>
+                    <div class="controls">
+                        <input type="text" id="profileModalName" placeholder="Enter profile name">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#" id="profileModalClose" class="btn">Close</a>
+            <a href="#" id="profileModalAdd" class="btn btn-primary">Add</a>
+            <a href="#" id="profileModalUpdate" class="btn btn-primary">Update</a>
+            <a href="#" id="profileModalDelete" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+</body>
+</html>
