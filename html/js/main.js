@@ -32,7 +32,6 @@ var loadCheckBox = null;
         $('input[type="checkbox"]').click(function() {
             var id = $(this).attr('id');
             var isChecked = profiles[profilesKey][profiles.current].checklistData[id] = $(this).prop('checked');
-            _gaq.push(['_trackEvent', 'Checkbox', (isChecked ? 'Check' : 'Uncheck'), id]);
             $(this).parent().parent().find('li > label > input[type="checkbox"]').each(function() {
                 var id = $(this).attr('id');
                 profiles[profilesKey][profiles.current].checklistData[id] = isChecked;
@@ -46,7 +45,6 @@ var loadCheckBox = null;
             profiles.current = $(this).val();
             $.jStorage.set(profilesKey, profiles);
             populateChecklists();
-            _gaq.push(['_trackEvent', 'Profile', 'Change', profiles.current]);
         });
 
         $('#profileAdd').click(function() {
@@ -56,7 +54,6 @@ var loadCheckBox = null;
             $('#profileModalUpdate').hide();
             $('#profileModalDelete').hide();
             $('#profileModal').modal('show');
-            _gaq.push(['_trackEvent', 'Profile', 'Add']);
         });
 
         $('#profileEdit').click(function() {
@@ -70,7 +67,6 @@ var loadCheckBox = null;
                 $('#profileModalDelete').hide();
             }
             $('#profileModal').modal('show');
-            _gaq.push(['_trackEvent', 'Profile', 'Edit', profiles.current]);
         });
 
         $('#profileModalAdd').click(function(event) {
@@ -86,7 +82,6 @@ var loadCheckBox = null;
                 populateChecklists();
             }
             $('#profileModal').modal('hide');
-            _gaq.push(['_trackEvent', 'Profile', 'Create', profile]);
         });
 
         $('#profileModalUpdate').click(function(event) {
@@ -100,7 +95,6 @@ var loadCheckBox = null;
                 populateProfiles();
             }
             $('#profileModal').modal('hide');
-            _gaq.push(['_trackEvent', 'Profile', 'Update', profile]);
         });
 
         $('#profileModalDelete').click(function(event) {
@@ -117,13 +111,11 @@ var loadCheckBox = null;
             populateProfiles();
             populateChecklists();
             $('#profileModal').modal('hide');
-            _gaq.push(['_trackEvent', 'Profile', 'Delete']);
         });
 
         $('#profileModalClose').click(function(event) {
             event.preventDefault();
             $('#profileModal').modal('hide');
-            _gaq.push(['_trackEvent', 'Profile', 'Close']);
         });
 
         calculateTotals();
