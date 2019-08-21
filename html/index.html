@@ -29,7 +29,7 @@
 		  <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link disabled" href="#tabPlaythrough" data-toggle="tab">Playthrough</a>
             <a class="nav-item nav-link active" href="#tabJobs" data-toggle="tab">Jobs</a>
-            <a class="nav-item nav-link disabled" href="#tabTrusts" data-toggle="tab">Trusts</a>
+            <a class="nav-item nav-link" href="#tabTrusts" data-toggle="tab">Trusts</a>
             <a class="nav-item nav-link" href="#tabMissions" data-toggle="tab">Missions</a>
             <a class="nav-item nav-link disabled" href="#tabQuests" data-toggle="tab">Quests</a>
             <a class="nav-item nav-link" href="#tabInformation" data-toggle="tab">Information</a>
@@ -139,19 +139,7 @@
 			</div>
 
             <div class="tab-pane" id="tabTrusts">
-
-                <h2>Trusts <span id="trusts_overall_total"></span></h2>
-                <ul>
-                    <li><a href="#Tank">Tank</a> <span id="trusts_nav_totals_1"></span></li>
-                    <h3></h3>
-                </ul>
-
-                <a name="Tank"></a>
-                <h3>Tank <span id="trusts_totals_1"></span></h3>
-                <ul>
-                    <li data-id="trusts_1_1">Abenzio</li>
-                    <li data-id="trusts_1_2">Utsusemi</li>
-                </ul>
+				<div data-fragment="tabTrusts.html" data-eval-js="true"></div>
 			</div>
 
             <div class="tab-pane" id="tabMissions">
@@ -161,9 +149,9 @@
 						<a class="nav-link active" href="#tabBastok" data-toggle="tab"><img src="img/Bastok_Icon.png" width="20" height="20" /> Bastok <span id="Bastok_overall_total"></span></a>
 						<a class="nav-link" href="#tabWindurst" data-toggle="tab"><img src="img/Windurst_Icon.png" width="20" height="20" /> Windurst <span id="Windurst_overall_total"></span></a>
 						<a class="nav-link" href="#tabSandoria" data-toggle="tab"><img src="img/Sandorian_Icon.png" width="20" height="20" /> Sandoria<span id="Sandoria_overall_total"></span></a>
-						<a class="nav-link disabled" href="#tabZilart" data-toggle="tab">Rise Of the Zilart<span id="Zilart_overall_total"></span></a>
+						<a class="nav-link" href="#tabZilart" data-toggle="tab"><img src="img/Zilart_Icon.jpg" width="20" height="20" /> Rise Of the Zilart<span id="Zilart_overall_total"></span></a>
 						<a class="nav-link disabled" href="#tabCoP" data-toggle="tab">Chains of Promathia<span id="CoP_overall_total"></span></a>
-						<a class="nav-link disabled" href="#tabToAU" data-toggle="tab">Treasures of Aht Urhgan<span id="ToAU_overall_total"></span></a>
+						<a class="nav-link" href="#tabToAU" data-toggle="tab"><img src="img/AhtUrghan_Icon.png" width="20" height="20" /> Treasures of Aht Urhgan<span id="ToAU_overall_total"></span></a>
 						<a class="nav-link disabled" href="#tabWotG" data-toggle="tab">Wings of the Goddess<span id="WotG_overall_total"></span></a>
 						<a class="nav-link disabled" href="#tabAdoulin" data-toggle="tab">Seekers of Adoulin<span id="Adoulin_overall_total"></span></a>
 						<a class="nav-link disabled" href="#tabRhapsodies" data-toggle="tab">Rhapsodies of Vana'diel<span id="Rhapsodies_overall_total"></span></a>
@@ -183,6 +171,9 @@
 						</div>
 						<div class="tab-pane" id="tabCoP">
 							<div data-fragment="tabCoP.html" data-eval-js="true"></div>
+						</div>
+						<div class="tab-pane" id="tabToAU">
+							<div data-fragment="tabToAU.html" data-eval-js="true"></div>
 						</div>
 						<div class="tab-pane" id="tabWotG">
 							<div data-fragment="tabWotG.html" data-eval-js="true"></div>
